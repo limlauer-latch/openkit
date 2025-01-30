@@ -1,5 +1,19 @@
-# OpenKit Documentation
-## Overview
+#### OpenKit Documentation
+## Table of contents
+1. [Readme](README.md)
+2. [Partner credentials](credentials.md)
+1. [Property and door setup](setup.md)
+3. [Fetch your doors and properties](get_doors_and_properties.md)
+4. [Fetch your users](get_users.md)
+5. [Create users and manage access](create_users_and_access.md)
+6. [Inviting guests](share_access.md)
+7. [SDK: iOS Tutorial](ios_tutorial.md)
+9. [SDK: Android Tutorial](android_tutorial.md)
+11. [FAQs](faqs.md)
+12. [Examples](exmaples.md)
+13. [Changelog](changelog.md)
+
+# Overview
 Latch offers a comprehensive access control system for property managers, allowing control over multiple properties and portfolios. It enables them to manage who has access to which spaces and when, view access history, and set up and manage multiple users and guests—all through Mission Control (our web manager).
 
 OpenKit is our API and SDK set designed for partners who want to automate user creation in Latch, issue credentials to users, and specify the entrances residents can access along with their access schedules.
@@ -12,11 +26,11 @@ Currently, there is no testing or development environment available for partners
 
 Since this is a production environment, partners must adhere to best practices when developing and testing applications and services. This is essential to maintain acceptable levels of traffic to the Latch backend. Please note that traffic from Partner backends will be closely monitored for unusual activity and may be rate-limited based on typical usage patterns.
 
-### Release Schedule
+## Release Schedule
 Latch teams will work to ensure that issues are resolved in a timely manner by providing hotfixes for Security and Sev1 issues that are either identified by internal Latch teams or by Partner teams.
 Partners will be expected to update their App’s Latch SDK version within 90 days of release.
 
-### Customers and Service Partners
+## Customers and Service Partners
 
 Latch is focused on building great solutions to serve both our customers and our partners. 
 
@@ -31,7 +45,7 @@ For partners, we are building world-class SDKs and APIs to support mutual custom
 | Partner | Utilizes the Unlock Kit and User Kit. |
 | Customer Partner | Purchases Latch devices and utilizes the Unlock Kit and User Kit. |
 
-### Responsibilities
+## Responsibilities
 When implementing the Latch Unlock Kit and User Kit, Partners work together with Latch to provide a great user experience to their customers and end-users. Below is a listing of some of the customer and partner responsibilities. Customer Partner responsibilities are the sum of customer and partner responsibilities.
 
 | Customer | Partner | Latch |
@@ -46,17 +60,3 @@ When implementing the Latch Unlock Kit and User Kit, Partners work together with
 | | Gather Bluetooth Permissions | Provide a list of Doors and Devices to App |
 | | | Gather User Consent |
 | | | Traffic Monitoring |
-
-## Table of contents
-1. [Readme](README.md)
-2. [Partner credentials](credentials.md)
-1. [Property and door setup](setup.md)
-3. [Fetch your doors and properties](get_doors_and_properties.md)
-4. [Fetch your users](get_users.md)
-5. [Create users and manage access](create_users_and_access.md)
-6. [Inviting guests](share_access.md)
-7. [SDK: iOS Tutorial](ios_tutorial.md)
-9. [SDK: Android Tutorial](android_tutorial.md)
-11. [FAQs](faqs.md)
-12. [Examples](exmaples.md)
-13. [Changelog](changelog.md)
