@@ -1,5 +1,5 @@
-#### OpenKit Documentation
-## Table of contents
+# OpenKit Documentation
+### Table of contents
 1. [Readme](README.md)
 2. [Partner credentials](credentials.md)
 1. [Property and door setup](setup.md)
@@ -13,7 +13,7 @@
 12. [Examples](exmaples.md)
 13. [Changelog](changelog.md)
 
-# Overview
+## Overview
 Latch offers a comprehensive access control system for property managers, allowing control over multiple properties and portfolios. It enables them to manage who has access to which spaces and when, view access history, and set up and manage multiple users and guests—all through Mission Control (our web manager).
 
 OpenKit is our API and SDK set designed for partners who want to automate user creation in Latch, issue credentials to users, and specify the entrances residents can access along with their access schedules.
