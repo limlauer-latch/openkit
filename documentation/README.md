@@ -12,6 +12,10 @@ Currently, there is no testing or development environment available for partners
 
 Since this is a production environment, partners must adhere to best practices when developing and testing applications and services. This is essential to maintain acceptable levels of traffic to the Latch backend. Please note that traffic from Partner backends will be closely monitored for unusual activity and may be rate-limited based on typical usage patterns.
 
+### Release Schedule
+Latch teams will work to ensure that issues are resolved in a timely manner by providing hotfixes for Security and Sev1 issues that are either identified by internal Latch teams or by Partner teams.
+Partners will be expected to update their App’s Latch SDK version within 90 days of release.
+
 ### Customers and Service Partners
 
 Latch is focused on building great solutions to serve both our customers and our partners. 
@@ -28,7 +32,6 @@ For partners, we are building world-class SDKs and APIs to support mutual custom
 | Customer Partner | Purchases Latch devices and utilizes the Unlock Kit and User Kit. |
 
 ### Responsibilities
-
 When implementing the Latch Unlock Kit and User Kit, Partners work together with Latch to provide a great user experience to their customers and end-users. Below is a listing of some of the customer and partner responsibilities. Customer Partner responsibilities are the sum of customer and partner responsibilities.
 
 | Customer | Partner | Latch |
