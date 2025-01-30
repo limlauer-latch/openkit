@@ -6,7 +6,7 @@
 3. [Fetch your doors and properties](get_doors_and_properties.md)
 4. [Fetch your users](get_users.md)
 5. [Create users and manage access](create_users_and_access.md)
-6. [Inviting guests](share_access.md)
+6. [Inviting guests](invite_guests.md)
 7. [SDK: iOS Tutorial](ios_tutorial.md)
 9. [SDK: Android Tutorial](android_tutorial.md)
 11. [FAQs](faqs.md)
