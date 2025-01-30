@@ -52,6 +52,10 @@ In case of an error, the API will return the following error responses:
 
 # 2. Fetching your doors
 Get a list of all your assigned doors using a partner-scoped token. Can be filtered by property UUID.
+This endpoint will list all your available properties and doors, if you think a property is missing, make sure the property manager added you as a partner to at least one door in that property.
+> [!IMPORTANT]
+> In Mission Control, you can create virtual Doors before linking them to an activated lock (physical device). In this response, if `device` is null, then the door is **not activated**, so you will not be able to assign any access to it.
+OpenKit currently only supports doors of type DOOR, and not ELEVATOR.
 ### Request
 |Endpoint|GET https://rest.latchaccess.com/access/sdk/v1/doors  |
 |--|--|
