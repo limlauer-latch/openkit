@@ -1,6 +1,5 @@
 # Partner Backend
-
-Latch will provide Partners with a unique [Auth0 app](https://auth0.com/docs/get-started/applications).
+After the onboarding process is finished, Latch will provide Partners with a unique [Auth0 app](https://auth0.com/docs/get-started/applications).
 This page covers what your [client ID and secret](#1-client-id-and-client-secret) are for, [partner and user scoped tokens](#2-authorization-token), [token generation](#3-authorization-token-generation), [token expiration](#4-token-expiration), and refresh [token generation](#5-refresh-token).
 
 > [!NOTE]
