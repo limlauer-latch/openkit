@@ -288,6 +288,8 @@ In case of an error, the API will return the following error codes:
 
 **HTTP 500**
 * `error="internal_server_error"`: there was an unexpected error. ⇒ Contact Latch Support to help debug this issue.
+> [!IMPORTANT]
+> The Partner App will need to re-initialize the Latch SDK with the new Access Token.
 
 # 6. Sequence diagram
 ```mermaid
@@ -345,5 +347,3 @@ In case of an error, the API will return the following error codes:
 	        end
 	    end
 ```
-> [!IMPORTANT]
-> The Partner App will need to re-initialize the Latch SDK with the new Access Token.
