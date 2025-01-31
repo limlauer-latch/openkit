@@ -2,7 +2,11 @@
 
 ![logo](assets/openkit_background.jpg)
 
-**OpenKit** is a property technology platform that allows partners, developers and service providers the ability to bring Latch’s integrated offering of hardware, software and services to new verticals, including commercial and hospitality as well as new delivery experiences, specialized property services and more.
+**OpenKit** is our collection of APIs and SDKs that empowers partners, developers, and service providers to integrate Latch's hardware, software, and services into a variety of industries. This includes commercial and hospitality applications, innovative delivery solutions, specialized property services, and more.
+
+## Documentation
+
+Start [here](./documentation/README.md).
 
 ## Contact
 
