@@ -3,7 +3,7 @@ Once you have your partner credentials, you need to have access to properties. Y
 
 1. A Property Manager (or a person with the necessary authority) requests Latch to add a partner to their property via email.[^1]
 2. Latch adds the partner to the property.[^2]
-3. In Mission Control, a Property Manager selects the doors they want the partner to have access to (door-per-door). _This means editing each door and adding the partner from the dropdown (Note: doors, not keys)_
+3. In Mission Control, a Property Manager [selects the doors they want the partner to have access to](https://support.latch.com/hc/en-us/articles/19238744501143-Managing-OpenKit-Partners-Access-to-Latch) (door-per-door). _This means editing each door and adding the partner from the dropdown (Note: doors, not keys)_
 4. Only then, the partner will see those doors in the list from the /doors endpoint.
 5. You use the /doors endpoint to get a list of the buildings and doors you were assigned as a partner.
 6. Group them as you see fit.[^3]
