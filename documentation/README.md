@@ -27,6 +27,13 @@ Currently, there is no testing or development environment available for partners
 
 Since this is a production environment, partners must adhere to best practices when developing and testing applications and services. This is essential to maintain acceptable levels of traffic to the Latch backend. Please note that traffic from Partner backends will be closely monitored for unusual activity and may be rate-limited based on typical usage patterns.
 
+## Partner onboarding process
+To initiate the evaluation process, please complete our Partner Evaluation Assessment Questionnaire Form [here](https://docs.google.com/forms/d/e/1FAIpQLSciVX_YEF4654ts2Rz-L7SqdSfdaoZLWo5zjT9YmNjaCnCBrA/viewform?usp=send_form).
+
+Your responses to this form will help us better understand your organization, your current operations, and your proposed integration with Latch. This information is crucial for us to assess the compatibility and potential success of our partnership. You can also email integrations@latch.com to add more details about your inteded integration. If you have any questions or require clarification on any of the form fields, feel free to reach out to us at integrations@latch.com.
+
+Once we've completed the evaluation, we'll send you the required document for signature. After it's signed, we'll provide your partner credentials and access to the SDK binaries.
+
 ## Release Schedule
 Latch teams will work to ensure that issues are resolved in a timely manner by providing hotfixes for Security and Sev1 issues that are either identified by internal Latch teams or by Partner teams.
 Partners will be expected to update their App’s Latch SDK version within 90 days of release.
