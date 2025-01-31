@@ -10,9 +10,10 @@
 8. [Partner app](partner_app.md)
 9. [SDK: iOS Tutorial](ios_tutorial.md)
 10. [SDK: Android Tutorial](android_tutorial.md)
-11. [FAQs](faqs.md)
-12. [Use cases](./usecases)
-13. [Changelog](changelog.md)
+11. [System flow diagrams](system_flow.md)
+12. [FAQs](faqs.md)
+13. [Use cases](./usecases)
+14. [Changelog](changelog.md)
 
 ## Overview
 Latch offers a comprehensive access control system for property managers, allowing control over multiple properties and portfolios. It enables them to manage who has access to which spaces and when, view access history, and set up and manage multiple users and guests—all through Mission Control (our web manager).
