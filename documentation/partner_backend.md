@@ -3,6 +3,9 @@
 Latch will provide Partners with a unique [Auth0 app](https://auth0.com/docs/get-started/applications).
 This page covers what your [client ID and secret](#1-client-id-and-client-secret) are for, [partner and user scoped tokens](#2-authorization-token), [token generation](#3-authorization-token-generation), [token expiration](#4-token-expiration), and refresh [token generation](#5-refresh-token).
 
+> [!NOTE]
+> You can find a diagram for this process [here](#6-sequence-diagram)
+
 # 1. Client ID and Client Secret
 These are unique values provided by Latch to the Partner through secure and encrypted channels. It is the Partner’s responsibility to securely store the Client Id and Client Secret so that it is only used when communicating with the Latch Auth0 app.
 You will receive your partner credentials (ID and Secret) after you have completed the partner onboarding.
@@ -286,5 +289,61 @@ In case of an error, the API will return the following error codes:
 **HTTP 500**
 * `error="internal_server_error"`: there was an unexpected error. ⇒ Contact Latch Support to help debug this issue.
 
+# 6. Sequence diagram
+```mermaid
+	sequenceDiagram
+	    participant User
+	    participant Partner App
+	    participant Partner BE
+	    participant Latch Auth0
+	    participant Latch BE
+	
+	    alt User-Scoped Flow
+	        User->>Partner App: Initiates process (via Partner App)
+	        Partner App->>Partner BE: Sends User Email & IP
+	        Partner BE->>Latch Auth0: POST /passwordless/start (Client ID/Secret, Email, IP)
+	        Latch Auth0-->>User: OTP Sent to User Email
+	        Partner App->>User: Prompts for OTP
+	        User->>Partner App: Enters OTP
+	        Partner App->>Partner BE: Sends User Email & OTP
+	        Partner BE->>Latch Auth0: POST /oauth/token (Client ID/Secret, Email, OTP)
+	        Latch Auth0-->>Partner BE: Access Token, Refresh Token
+	        Partner BE->>Partner App: Access Token
+	        Partner App->>Latch SDK: Initializes SDK with Access Token
+	        Latch SDK->>Latch BE: Unlock Request
+	        Latch BE-->>Latch SDK: Unlock Response
+	        Latch SDK-->>Partner App: Unlock Success/Failure
+	        Partner App->>User: Displays Unlock Status
+	
+	        alt Access Token Expires
+	            Latch SDK->>Latch BE: Unlock Request (Expired Token)
+	            Latch BE-->>Latch SDK: TOKEN_EXPIRED Error
+	            Latch SDK-->>Partner App: TOKEN_EXPIRED Exception
+	            Partner App->>Partner BE: Requests New Access Token (Refresh Token)
+	            Partner BE->>Latch Auth0: POST /oauth/token (Client ID/Secret, Refresh Token)
+	            Latch Auth0-->>Partner BE: New Access Token, Refresh Token
+	            Partner BE->>Partner App: New Access Token
+	            Partner App->>Latch SDK: Re-initializes SDK with New Access Token
+	            Latch SDK->>Latch BE: Unlock Request (New Token)
+	            Latch BE-->>Latch SDK: Unlock Response
+	            Latch SDK-->>Partner App: Unlock Success/Failure
+	            Partner App->>User: Displays Unlock Status
+	        end
+	    else Partner-Scoped Flow
+	        Partner App->>Partner BE: Initiates Admin Action
+	        Partner BE->>Latch Auth0: POST /oauth/token (M2M Client ID/Secret)
+	        Latch Auth0-->>Partner BE: Access Token
+	        Partner BE->>Latch BE: Admin Request (with Access Token)
+	        Latch BE-->>Partner BE: Admin Response
+	        Partner BE->>Partner App: Displays Result
+	        alt Access Token Expires
+	          Partner BE->>Latch Auth0: POST /oauth/token (M2M Client ID/Secret)
+	          Latch Auth0-->>Partner BE: Access Token
+	          Partner BE->>Latch BE: Admin Request (with Access Token)
+	          Latch BE-->>Partner BE: Admin Response
+	          Partner BE->>Partner App: Displays Result
+	        end
+	    end
+```
 > [!IMPORTANT]
 > The Partner App will need to re-initialize the Latch SDK with the new Access Token.
