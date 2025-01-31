@@ -11,7 +11,7 @@
 9. [SDK: iOS Tutorial](ios_tutorial.md)
 10. [SDK: Android Tutorial](android_tutorial.md)
 11. [FAQs](faqs.md)
-12. [Examples](exmaples.md)
+12. [Use cases](./usecases)
 13. [Changelog](changelog.md)
 
 ## Overview
