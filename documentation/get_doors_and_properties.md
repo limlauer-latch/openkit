@@ -94,7 +94,8 @@ OpenKit currently only supports doors of type DOOR, and not ELEVATOR.
 ```
 
 > [!NOTE]
-> Doors of type ELEVATOR are currently not supported in OpenKit. Most elevators are set up as DOOR on Mission Control.*
+> Doors of type ELEVATOR are currently not supported in OpenKit. Most elevators are set up as DOOR on Mission Control.[^1]
+> "Building Entrance" and "Communal" in the Mission Control UI will show in the response as "COMMUNAL"
 ### Attributes
 If the request was successful, the Partner BE will receive an HTTP 200 with the following fields:
 -  `doors`: List of "doors" and their metadata. Each entry will include:
@@ -117,3 +118,5 @@ In case of an error, the API will return the following error responses:
 		⇒ Check the token hasn't expired and refresh the token if needed.
 - `500 Internal Server Error`: there was an unexpected error.
 		⇒ Contact Latch Support
+
+[^1]: Elevators usually have a reader that is set up as a regular door in Mission Control but has the name elevator; "Elevator" type doors are less common and use weigand codes to provide access, which OpenKit doesn't support.
